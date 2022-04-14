@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level 3</title>
+    <link rel="stylesheet" type="text/css" href="./css/level.css">
+    <link rel="stylesheet" type="text/css" href="./css/lightbox.css">
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/lightbox.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>Level 3</h1>
+    </div>
+    <div id="level">
+        <img src="./img/level3.png">
+    </div>
+    <form>
+        Your Answer:<input type="text" id="answer" name="answer" placeholder="Click here to answer"
+            onfocus="this.placeholder=''" onblur="this.placeholder='Click here to answer'">
+        <button id="getAnswer" style="margin-left:10px;" onclick="GetAnswer()">Enter</button>
+    </form>
+    <div id="button_list">
+        <button id="nextLevel" onclick="NextLevel()">Next Level</button>
+        <button id="backToPreLevel" onclick="Back()">Back</button>
+        <a href="img/level3_tips.png" data-lightbox="image-2" data-title="Tips" style="text-decoration:none">
+            <button id="tips">Tips</button>
+        </a>
+        <a href="img/level3_answer.png" data-lightbox="image-1" data-title="Answer" style="text-decoration:none">
+            <button id="result">Answer</button>
+        </a>
+    </div>
+    <div id="Scores">
+        <p>Scores:<span id="scores">0</span></p>
+    </div>
+    <p id="correct_answer" style="visibility: hidden;">13</p>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            ShowScores();
+        }
+    </script>
+
+</html>
